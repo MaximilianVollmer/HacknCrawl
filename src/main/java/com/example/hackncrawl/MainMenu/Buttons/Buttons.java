@@ -9,6 +9,10 @@ public class Buttons {
         this.name = name;
     }
 
+    public String htmlCreator(){
+        return "<button>"+this.name+"</button>";
+    }
+
     public void getInformations(){
         System.out.println(this.name);
         System.out.println(this.is_pressed);
