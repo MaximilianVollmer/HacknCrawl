@@ -19,6 +19,7 @@ public class HacknCrawlApplication {
 		Styles style = new Styles();
 
 		MainMenu menu = new MainMenu();
+		// System.out.println(style.getStyles() + menu.createMenu());
 		return style.getStyles() + menu.createMenu();
 	}
 
