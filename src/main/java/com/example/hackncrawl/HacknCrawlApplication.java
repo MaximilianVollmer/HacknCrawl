@@ -22,5 +22,10 @@ public class HacknCrawlApplication {
 		// System.out.println(style.getStyles() + menu.createMenu());
 		return style.getStyles() + menu.createMenu();
 	}
-
+	@GetMapping("/How_To_Play")
+	public String HowToPlay(){
+		Styles style = new Styles();
+		MainMenu menu = new MainMenu();
+		return style.getStyles() + menu.createHowToPlay();
+	}
 }

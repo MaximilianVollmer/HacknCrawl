@@ -10,7 +10,8 @@ public class Buttons {
     }
 
     public String htmlCreator(){
-        return "<button>"+this.name+"</button>";
+        String javascript = "<script>document.getElementById('"+this.name+"').addEventListener('click', function(e) {document.location.href='http://localhost:8080/"+this.name+"'})</script>";
+        return "<button id="+this.name+">"+this.name+"</button>"+javascript;
     }
 
     public void getInformations(){
