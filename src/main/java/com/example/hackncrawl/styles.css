@@ -1,7 +1,8 @@
 body{
     text-align: center;
     align-items: center;
-    background-color: aquamarine;
+    background-image: url("./Cards/CardPictures/Cards_Back.png");
+    background-repeat: repeat-x;
 }
 button{
     font-family:'Algerian';

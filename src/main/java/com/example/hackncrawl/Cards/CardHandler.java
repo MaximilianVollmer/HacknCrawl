@@ -10,115 +10,86 @@ public class CardHandler {
     public CardHandler(Boolean is_big){
         String kind_name="";
         String category_name="";
-        if(is_big){
-            for (int i=0;i<big_deck[0].length;++i){
-                switch (i) {
-                    case 0:
-                        category_name="Heart";
-                        break;
-                    case 1:
-                        category_name="diamonds";
-                        break;
-                    case 2:
-                        category_name="spades";
-                        break;
-                    case 3:
-                        category_name="cross";
-                        break;
-                }
+        int[][] deck = is_big?big_deck:smol_deck;
 
-                for (int j=0;j<big_deck[1].length;++j){
-                    switch (j){
-                        case 0:
-                            kind_name="Two";
-                            break;
-                        case 1:
-                            kind_name="Three";
-                            break;
-                        case 2:
-                            kind_name="Four";
-                            break;
-                        case 3:
-                            kind_name="Five";
-                            break;
-                        case 4:
-                            kind_name="Six";
-                            break;
-                        case 5:
-                            kind_name="Seven";
-                            break;
-                        case 6:
-                            kind_name="Eight";
-                            break;
-                        case 7:
-                            kind_name="Nine";
-                            break;
-                        case 8:
-                            kind_name="Ten";
-                            break;
-                        case 9:
-                            kind_name="Jack";
-                            break;
-                        case 10:
-                            kind_name="Lady";
-                            break;
-                        case 11:
-                            kind_name="King";
-                            break;
-                        case 12:
-                            kind_name="Ace";
-                            break;
-                    }
-                    this.all_cards.add(new Cards(big_deck[1][j], category_name, kind_name));
-                }
+        for (int i=0;i<deck[0].length;++i){
+            String png_file_cat="";
+            switch (i) {
+                case 0:
+                    category_name="Heart";
+                    png_file_cat+="Heart";
+                    break;
+                case 1:
+                    category_name="Diamonds";
+                    png_file_cat+="Diamonds";
+                    break;
+                case 2:
+                    category_name="Spades";
+                    png_file_cat+="Shades";
+                    break;
+                case 3:
+                    category_name="Cross";
+                    png_file_cat+="Cross";
+                    break;
             }
-        }
-        else{
-            for (int i=0;i<smol_deck[0].length;++i){
-                switch (i) {
+            for (int j=0;j<deck[1].length;++j){
+                String png_file_kind="";
+                switch (deck[1][j]){
                     case 0:
-                        category_name="Heart";
+                        kind_name="Two";
+                        png_file_kind+="2";
                         break;
                     case 1:
-                        category_name="diamonds";
+                        kind_name="Three";
+                        png_file_kind+="3";
                         break;
                     case 2:
-                        category_name="spades";
+                        kind_name="Four";
+                        png_file_kind+="4";
                         break;
                     case 3:
-                        category_name="cross";
+                        kind_name="Five";
+                        png_file_kind+="5";
+                        break;
+                    case 4:
+                        kind_name="Six";
+                        png_file_kind+="6";
+                        break;
+                    case 5:
+                        kind_name="Seven";
+                        png_file_kind+="7";
+                        break;
+                    case 6:
+                        kind_name="Eight";
+                        png_file_kind+="8";
+                        break;
+                    case 7:
+                        kind_name="Nine";
+                        png_file_kind+="9";
+                        break;
+                    case 8:
+                        kind_name="Ten";
+                        png_file_kind+="10";
+                        break;
+                    case 9:
+                        kind_name="Jack";
+                        png_file_kind+="Jack";
+                        break;
+                    case 10:
+                        kind_name="Queen";
+                        png_file_kind+="Queen";
+                        break;
+                    case 11:
+                        kind_name="King";
+                        png_file_kind+="King";
+                        break;
+                    case 12:
+                        kind_name="Ace";
+                        png_file_kind+="Ace";
                         break;
                 }
-
-                for (int j=0;j<smol_deck[1].length;++j){
-                    switch (j) {
-                        case 0:
-                            kind_name="Seven";
-                            break;
-                        case 1:
-                            kind_name="Eight";
-                            break;
-                        case 2:
-                            kind_name="Nine";
-                            break;
-                        case 3:
-                            kind_name="Ten";
-                            break;
-                        case 4:
-                            kind_name="Jack";
-                            break;
-                        case 5:
-                            kind_name="Lady";
-                            break;
-                        case 6:
-                            kind_name="King";
-                            break;
-                        case 7:
-                            kind_name="Ace";
-                            break;
-                    }
-                    this.all_cards.add(new Cards(smol_deck[1][j], category_name, kind_name));
-                }
+                String png_file = png_file_cat+"_"+png_file_kind;
+                this.all_cards.add(new Cards(deck[1][j], category_name, kind_name, png_file));
             }
         }
         
