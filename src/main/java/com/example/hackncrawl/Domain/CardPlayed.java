@@ -1,7 +1,7 @@
 package com.example.hackncrawl.Domain;
 
 
-import jdk.jfr.DataAmount;
+import com.example.hackncrawl.Cards.Card;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class HelloMessage {
-    private String name;
+public class CardPlayed {
+    private String symbol;
+    private String number;
+    private String card;
 }

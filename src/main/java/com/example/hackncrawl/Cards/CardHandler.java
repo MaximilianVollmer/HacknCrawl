@@ -7,6 +7,8 @@ public class CardHandler {
     int[][] smol_deck = {{1,2,3,4},{7,8,9,10,11,12,13,14}};
     public ArrayList<Card> all_cards = new ArrayList<Card>();
 
+    public ArrayList<ArrayList<Card>> all_cards_numbers = new ArrayList<ArrayList<Card>>();
+
     public CardHandler(Boolean is_big){
         String kind_name="";
         String category_name="";
