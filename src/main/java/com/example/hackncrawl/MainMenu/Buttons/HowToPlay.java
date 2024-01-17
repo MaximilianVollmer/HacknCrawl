@@ -1,5 +1,7 @@
 package com.example.hackncrawl.MainMenu.Buttons;
 
+import com.example.hackncrawl.Cards.Card;
+
 public class HowToPlay extends Buttons{
     
     public HowToPlay(){
@@ -7,6 +9,13 @@ public class HowToPlay extends Buttons{
     }
 
     public String ClickEventListener(){
+        Card heart_7 = new Card(7, "Heart", "Seven", "Heart_7");
+        Card heart_8 = new Card(8, "Heart", "Eight", "Heart_8");
+        Card heart_jack = new Card(11, "Jack", "Seven", "Heart_Jack");
+        String heart_7_card = heart_7.getHtml();
+        String heart_8_card = heart_8.getHtml();
+        String heart_jack_card = heart_jack.getHtml();
+
         String html = """
         <div
         id=ButtonHolder
@@ -31,19 +40,31 @@ public class HowToPlay extends Buttons{
         </div>
         <div 
         id=genRules
-        style=display:none;height:90%;width:100%;font-family:'Algerian';font-size:150%;background-color:black;color:white;
+        style=display:none;height:90%;width:100%;font-family:'Algerian';font-size:150%;background-color:black;color:white;text-align:left;
         class=show 
-        >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>   
-        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br>
-        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<br>
+        ><br>
+        1. At the beginning of the game, every player receives 5 cards, the rest becomes the draw pile.<br> Moreover a 'starting card' is drawn and put in the middle. This becomes the play pile.
+        <br><br>
+        2. The host begins and chooses a card from their hand, which matches the 'starting card'.<br> 'Matching' are those cards, that are either the same suit (Hearts, Diamonds, etc.) or the same value (9, 10, Queen, etc.) as the top card on the play pile.
+        <br><br>
+        3. During each player's turn, they can put one matching card from their hand onto the play pile.<br> If a player doesn't possess a matching card, they must draw one from the draw pile.<br> If the newly drawn card is playable, the player is then allowed to put it on the play pile; if not, their turn is over and they have to wait till the next round.
+        <br><br>
+        4. If a player plays their second to last card, they must say 'Mau'; if they forget about it, they have to draw another card as a penalty.
+        <br><br>
+        5. Whoever empties their hand first by putting all cards onto the play pile, wins and must say 'Mau-Mau'.
         </div>
         <div 
         id=cardRules
-        style=display:none;height:90%;width:100%;font-family:'Algerian';font-size:150%;background-color:black;color:white;
-        >Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<br>
-        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.<br>
-        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.<br>   
-        Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.<br>
+        style=display:none;height:90%;width:100%;font-family:'Algerian';font-size:150%;background-color:black;color:white;text-align:left;
+        >
+        """+heart_7_card+"""
+        Whenever a player plays a card with the value '7', the next player must draw 2 cards. However, if the next player already possesses a '7', they can put it on top of the other '7' without drawing 2 cards themselves. Instead, the next player must draw 4 cards.
+        <br><br>
+        """+heart_8_card+"""
+        If an '8' is played, the next player is skipped and has to wait till the next round. (When played with 2 players, the player, who put the '8' on the play pile, can simply play another card.)
+        <br><br>
+        """+heart_jack_card+"""
+        A 'Jack' can be put on any card, no matter its value or suit. Moreover, whoever plays it, is allowed to 'wish' for a suit. The next player must therefore play a card with this suit; however they aren't allowed to play another 'Jack'.
         </div>
         """;
         String style ="<style>.show{display:block!important;opacity:0.8;}.Clicked{opacity:0.8!important;}</style>";
