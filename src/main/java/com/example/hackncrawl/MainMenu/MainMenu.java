@@ -31,7 +31,7 @@ public class MainMenu {
     }
 
     public String createHowToPlay(){
-        html_creation_string=this.body_style;
+        html_creation_string=this.body_style+this.how_to_play.ClickEventListener();
         return html_creation_string;
     }
     

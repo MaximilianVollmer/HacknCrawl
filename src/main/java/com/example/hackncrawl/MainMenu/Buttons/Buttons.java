@@ -14,6 +14,10 @@ public class Buttons {
         return "<button id="+this.name+">"+this.name+"</button>"+javascript;
     }
 
+    public String ClickEventListener(){
+        return "";
+    }
+
     public void getInformations(){
         System.out.println(this.name);
         System.out.println(this.is_pressed);
