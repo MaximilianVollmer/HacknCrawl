@@ -11,7 +11,7 @@ public class MainMenu {
     JoinGameButton join = new JoinGameButton();
     SettingButton settings = new SettingButton();
     HowToPlay how_to_play = new HowToPlay();
-    Base64getter base64 = new Base64getter("C:\\IU-Vorlesungen\\OOP\\Java-Projekte\\HacknCrawl\\HacknCrawl\\src\\main\\java\\com\\example\\hackncrawl\\Cards\\CardPictures/Cards_Back.png");
+    Base64getter base64 = new Base64getter("G:\\Coding Stuff\\Java\\HacknCrawl\\src\\main\\java\\com\\example\\hackncrawl\\Cards\\CardPictures/Cards_Back.png");
     String body_style =  "<style>body{background-image: url("+base64.getBase64()+");background-repeat: repeat; animation: moveIt 10s linear infinite;}</style>";
     
     public MainMenu(){

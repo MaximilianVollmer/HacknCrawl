@@ -16,7 +16,7 @@ public class Card {
         this.category = category;
         this.kind = kind;
         this.name = category+" "+kind;
-        this.png_file = "C:\\IU-Vorlesungen\\OOP\\Java-Projekte\\HacknCrawl\\HacknCrawl\\src\\main\\java\\com\\example\\hackncrawl\\Cards\\CardPictures/"+png_file+".png";
+        this.png_file = "G:\\Coding Stuff\\Java\\HacknCrawl\\src\\main\\java\\com\\example\\hackncrawl\\Cards\\CardPictures/"+png_file+".png";
     }
 
     public String getHtml(){
